@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-MZ">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PARTIDO FRELIMO - COMITÉ I CÍRCULO DO FOMENTO</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <style>
+    /* Reset básico */
+    * {
+      box-sizing: border-box;
+    }
+    body, html {
+      margin: 0; padding: 0; height: 100%;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: #fff;
+      color: #333;
+    }
+
+    /* Layout geral */
+    .container {
+      display: flex;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* Menu lateral */
+    nav.sidebar {
+      width: 250px;
+      background: #a70000;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      padding-top: 1.5rem;
+    }
+    nav.sidebar h1 {
+      font-size: 1.6rem;
+      font-weight: bold;
+      text-align: center;
+      margin: 0 1rem 0.5rem;
+      line-height: 1.2;
+      user-select: none;
+    }
+    nav.sidebar p {
+      text-align: center;
+      font-size: 1rem;
+      font-weight: 600;
+      margin: 0 1rem 1.5rem;
+      user-select: none;
+    }
+    nav.sidebar a {
+      color: white;
+      text-decoration: none;
+      padding: 1rem 2rem;
+      font-weight: 600;
+      border-left: 4px solid transparent;
+      transition: background 0.3s, border-left-color 0.3s;
+      cursor: pointer;
+    }
+    nav.sidebar a:hover,
+    nav.sidebar a.active {
+      background: #ff0000;
+      border-left-color: #fff;
+    }
+
+    /* Conteúdo principal */
+    main.content {
+      flex-grow: 1;
+      padding: 2rem 3rem;
+      overflow-y: auto;
+      background: #fafafa;
+    }
+
+    /* Títulos */
+    h2 {
+      color: #a70000;
+      margin-bottom: 1rem;
+      user-select: none;
+    }
+
+    /* Formulários */
+    form {
+      max-width: 600px;
+      background: white;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 0 12px rgb(167 0 0 / 0.3);
+    }
+    label {
+      display: block;
+      margin-top: 1rem;
+      font-weight: 600;
+      color: #a70000;
+      user-select: none;
+    }
+    input[type="text"],
+    input[type="date"],
+    input[type="number"],
+    select {
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 0.3rem;
+      border: 1.5px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+      transition: border-color 0.3s;
+    }
+    input[type="text"]:focus,
+    input[type="date"]:focus,
+    input[type="number"]:focus,
+    select:focus {
+      outline: none;
+      border-color: #a70000;
+    }
+    button.btn-submit {
+      margin-top: 1.5rem;
+      background: #a70000;
+      color: white;
+      border: none;
+      padding: 0.7rem 1.5rem;
+      border-radius: 5px;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      user-select: none;
+      transition: background 0.3s;
+    }
+    button.btn-submit:hover {
+      background: #ff0000;
+    }
+
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <nav class="sidebar">
+    <h1>PARTIDO FRELIMO</h1>
+    <p>COMITÉ I CÍRCULO DO FOMENTO</p>
+    <a href="#" class="active" data-target="inicio">Início</a>
+    <a href="#" data-target="aclln">ACLLN</a>
+    <a href="#" data-target="omm">OMM</a>
+    <a href="#" data-target="ojm">OJM</a>
+  </nav>
+
+  <main class="content">
+    <section id="inicio" class="page active">
+      <h2>Bem-vindo ao Comité I Círculo do Fomento</h2>
+      <p>Este site apresenta informações e formulários de inscrição das Organizações Sociais afiliadas ao Partido FRELIMO.</p>
+    </section>
+
+    <section id="aclln" class="page" style="display:none;">
+      <h2>ACLLN - Associação dos Combatentes da Luta de Libertação Nacional</h2>
+      <form>
+        <label for="aclln-nome">Nome completo:</label>
+        <input type="text" id="aclln-nome" required />
+        <label for="aclln-nasc">Data de nascimento:</label>
+        <input type="date" id="aclln-nasc" required />
+        <label for="aclln-numero">Número de combatente (se aplicável):</label>
+        <input type="text" id="aclln-numero" />
+        <label for="aclln-contacto">Contacto:</label>
+        <input type="text" id="aclln-contacto" required />
+        <button class="btn-submit" type="submit">Enviar Inscrição</button>
+      </form>
+    </section>
+
+    <section id="omm" class="page" style="display:none;">
+      <h2>OMM - Organização da Mulher Moçambicana</h2>
+      <form>
+        <label for="omm-nome">Nome completo:</label>
+        <input type="text" id="omm-nome" required />
+        <label for="omm-nasc">Data de nascimento:</label>
+        <input type="date" id="omm-nasc" required />
+        <label for="omm-profissao">Profissão:</label>
+        <input type="text" id="omm-profissao" />
+        <label for="omm-contacto">Contacto:</label>
+        <input type="text" id="omm-contacto" required />
+        <button class="btn-submit" type="submit">Enviar Inscrição</button>
+      </form>
+    </section>
+
+    <section id="ojm" class="page" style="display:none;">
+      <h2>OJM - Organização da Juventude Moçambicana</h2>
+      <form>
+        <label for="ojm-nome">Nome completo:</label>
+        <input type="text" id="ojm-nome" required />
+        <label for="ojm-nasc">Data de nascimento:</label>
+        <input type="date" id="ojm-nasc" required />
+        <label for="ojm-idade">Idade (até 35 anos):</label>
+        <input type="number" id="ojm-idade" max="35" min="0" required />
+        <label for="ojm-nucleo">Núcleo da OJM:</label>
+        <input type="text" id="ojm-nucleo" required />
+        <label for="ojm-cartao">Tem cartão de membro?</label>
+        <select id="ojm-cartao" required>
+          <option value="">Selecione</option>
+          <option>Sim</option>
+          <option>Não</option>
+        </select>
+        <label for="ojm-numero-cartao">Número do cartão:</label>
+        <input type="text" id="ojm-numero-cartao" />
+        <label for="ojm-trabalha">Trabalha?</label>
+        <select id="ojm-trabalha" required>
+          <option value="">Selecione</option>
+          <option>Sim</option>
+          <option>Não</option>
+        </select>
+        <label for="ojm-contacto">Contacto:</label>
+        <input type="text" id="ojm-contacto" required />
+        <button class="btn-submit" type="submit">Enviar Inscrição</button>
+      </form>
+    </section>
+
+  </main>
+</div>
+
+<script>
+  // Navegação simples entre seções
+  const links = document.querySelectorAll('nav.sidebar a');
+  const pages = document.querySelectorAll('main.content .page');
+
+  links.forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+
+      // Remove active de todos os links e páginas
+      links.forEach(l => l.classList.remove('active'));
+      pages.forEach(p => p.style.display = 'none');
+
+      // Ativa o link clicado e mostra a página correta
+      link.classList.add('active');
+      const targetId = link.getAttribute('data-target');
+      document.getElementById(targetId).style.display = 'block';
+    });
+  });
+</script>
+
+</body>
+</html>
